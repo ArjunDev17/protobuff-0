@@ -1,0 +1,40 @@
+//Top-Down Approach Version
+syntax = "proto3";
+
+
+// Top-level City message
+message City {
+    string name = 1;
+    int32 zipCode = 2;
+    string countryName = 3;  
+}
+
+// Top-level Street message, which includes City as a field
+message Street {
+    string streetName = 1;
+    City city = 2; // References the City message directly
+}
+
+// Top-level Building message, which includes Street as a field
+message Building {
+    string buildingName = 1;
+    uint32 buildingNumber = 2;
+    Street street = 3; // References the Street message directly
+}
+
+// Main Address message, which includes Building, Street, and City as fields
+message Address {
+    City city = 1;       // Uses the City message
+    Street street = 2;   // Uses the Street message
+    Building building = 3; // Uses the Building message
+}
+
+/*
+Benefits of This Structure
+Better Modularity and Reusability: Each message (City, Street, Building, Address) is defined independently at the top level. This allows each one to be reused in different contexts or other files.
+Logical Flow: The file reads from broader concepts (like Address) to more specific ones (like City), following a top-down, logical approach.
+Enhanced Maintainability: If you need to modify City or Street, these changes can be done at the top level without requiring changes in nested locations. It also makes it easy to add new fields to City or Street without affecting their parent structures.
+
+
+
+*/

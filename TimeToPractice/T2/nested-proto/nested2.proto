@@ -1,0 +1,44 @@
+//Bottom up approch
+syntax = "proto3";
+
+package example;
+
+// Represents a full address, including the building, street, and city information.
+message Address {
+    // The building associated with this address.
+    Building building = 1;
+    
+    // Represents a specific building within an address, including street information.
+    message Building {
+        // The name of the building, if applicable (e.g., "Empire State Building").
+        string buildingName = 1;
+        
+        // The number of the building on the street (e.g., "350").
+        uint32 buildingNumber = 2;
+        
+        // The street on which the building is located, including city information.
+        Street street = 3;
+        
+        // Represents a street, which includes the street name and city information.
+        message Street {
+            // The name of the street (e.g., "5th Avenue").
+            string streetName = 1;
+            
+            // The city in which the street is located.
+            City city = 2;
+            
+            // Represents a city, including name, zip code, and country.
+            message City {
+                // The name of the city (e.g., "New York").
+                string name = 1;
+                
+                // The postal/zip code of the city (e.g., "10001").
+                int32 zipCode = 2;
+                
+                // The name of the country where the city is located (e.g., "USA").
+                string countryName = 3;
+            }
+        }
+    }
+}
+

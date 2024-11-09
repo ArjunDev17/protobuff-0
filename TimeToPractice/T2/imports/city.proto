@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+// Defines the City message
+message City {
+    string name = 1;
+    int32 zipCode = 2;
+    string countryName = 3;
+}

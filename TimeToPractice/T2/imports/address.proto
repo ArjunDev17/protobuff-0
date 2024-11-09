@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+import "city.proto";      // Import city.proto
+import "street.proto";    // Import street.proto
+import "building.proto";  // Import building.proto
+
+// Main Address message, which includes Building, Street, and City as fields
+message Address {
+    City city = 1;          // Uses the City message from city.proto
+    Street street = 2;      // Uses the Street message from street.proto
+    Building building = 3;  // Uses the Building message from building.proto
+}
