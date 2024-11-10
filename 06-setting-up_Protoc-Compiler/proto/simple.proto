@@ -1,0 +1,5 @@
+syntax="proto3";
+// protoc --java_out=java proto/simple.proto
+message Uses{
+        uint32 id=1;
+}
