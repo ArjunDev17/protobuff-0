@@ -1,0 +1,11 @@
+syntax="proto3";
+package example.maps;
+
+option go_package="example.com/m/proto";
+
+message IdWrapper{
+  uint32 id=1;
+}
+message mapsEx{
+  map<string,IdWrapper> ids=1;
+}
