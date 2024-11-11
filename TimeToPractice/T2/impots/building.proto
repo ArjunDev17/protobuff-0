@@ -1,0 +1,9 @@
+syntax = "proto3";
+import "street.proto"; // Import street.proto to use the Street message
+
+// Defines the Building message with a reference to Street
+message Building {
+    string buildingName = 1;
+    uint32 buildingNumber = 2;
+    Street street = 3; // Uses the Street message from street.proto
+}

@@ -1,0 +1,8 @@
+syntax="proto3";
+package exm.maps;
+message IdWrapper{
+  uint32 id=1;
+}
+message mapsEx{
+  map<string,IdWrapper> ids=1;
+}

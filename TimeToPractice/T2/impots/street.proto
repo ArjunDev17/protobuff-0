@@ -1,0 +1,8 @@
+syntax = "proto3";
+import "city.proto"; // Import city.proto to use the City message
+
+// Defines the Street message with a reference to City
+message Street {
+    string streetName = 1;
+    City city = 2; // Uses the City message from city.proto
+}
