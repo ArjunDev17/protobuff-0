@@ -1,5 +1,6 @@
-package simple;
+package com.arjun.proto.simple;
 
+import com.example.options.AnotherDummy;
 import exm.simple.SimpleOuterClass;
 
 import java.util.Arrays;
@@ -7,6 +8,9 @@ import java.util.Arrays;
 public class SimpleMain {
     public void  msg(){
         System.out.println("inside simple main");
+        //compare line 12 and 14 no need to use (.) operator
+        AnotherDummy message1=AnotherDummy.newBuilder().build();
+
         SimpleOuterClass.Simple message=SimpleOuterClass.Simple.newBuilder()
                 .setId(9)
                 .setName("ramJI")
