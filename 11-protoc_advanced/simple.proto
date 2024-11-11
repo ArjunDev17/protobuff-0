@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package example.dummy;
+
+option go_package="example.com/m/proto";
+
+message Simple{
+        uint32 id=1;
+        bool is_simple=2;
+        string name=3;
+        repeated int32 simple_list=4;
+}
+
+/*
+arjun.singh@Update 11-protoc_advanced % protoc --decode_raw
+^C
+arjun.singh@Update 11-protoc_advanced % cat simple.bin | protoc --decode_raw
+1: 1
+2: 1
+3: "Kabbu"
+4: "\001\002\003\004\005"
+arjun.singh@Update 11-protoc_advanced % cat simple.bin | protoc --decode=Simple simp
+le.proto
+Type not defined: Simple
+arjun.singh@Update 11-protoc_advanced % cat simple.bin | protoc --decode=simple simple.proto
+Type not defined: simple
+arjun.singh@Update 11-protoc_advanced % cat simple.bin | protoc --decode=Simple simple.proto
+Type not defined: Simple
+arjun.singh@Update 11-protoc_advanced % cat simple.bin | protoc --decode=example.dummy.Simple simple.proto
+id: 1
+is_simple: true
+name: "Kabbu"
+simple_list: 1
+simple_list: 2
+simple_list: 3 
+simple_list: 4
+simple_list: 5
+arjun.singh@Update 11-protoc_advanced % 
+
+
+arjun.singh@Update 11-protoc_advanced % cat simple.txt | protoc --encode=example.dummy.Simple simple
+.proto > simple.pb
+arjun.singh@Update 11-protoc_advanced % 
+*/

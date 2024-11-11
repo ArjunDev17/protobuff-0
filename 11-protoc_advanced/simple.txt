@@ -1,0 +1,8 @@
+id: 1
+is_simple: true
+name: "Kabbu"
+simple_list: 1
+simple_list: 2
+simple_list: 3
+simple_list: 4
+simple_list: 5
