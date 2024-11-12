@@ -1,7 +1,4 @@
-Certainly! Below is the full `README.md` file in proper Markdown syntax, based on the description and structure you requested:
-
-```markdown
-# Protocol Buffers with Golang and Java
+## Protocol Buffers with Golang and Java
 
 This repository provides an in-depth guide to understanding and working with Protocol Buffers (.proto files), focusing on their integration with Golang and Java. It covers the following key areas:
 
@@ -45,7 +42,7 @@ This branch focuses on integrating Protocol Buffers with **Java**. It demonstrat
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/ArjunDev17/protobuff-0
    cd your-repo-name
    git checkout go_with_proto
    ```
@@ -96,7 +93,7 @@ This branch focuses on integrating Protocol Buffers with **Java**. It demonstrat
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/ArjunDev17/protobuff-0
    cd your-repo-name
    git checkout java_with_proto
    ```
@@ -143,11 +140,3 @@ This repository is licensed under the MIT License - see the [LICENSE](LICENSE) f
 ```
 
 ---
-
-### Key Points:
-
-- The file is properly formatted in **Markdown** syntax, using headings (`#`, `##`), code blocks (````bash` and ````java`), and bullet points for clarity.
-- Ensure you replace `"path/to/your/generated/proto"` and `your_proto_file.proto` with the actual paths/names relevant to your project.
-- The `LICENSE` section assumes that you have a `LICENSE` file in the repository. You can adjust or remove this section if necessary.
-
-This structure should work well for documenting your repository!
